@@ -55,7 +55,6 @@ celsiusLink.addEventListener("click", convertToCelsius);
 let farenheitLink = document.querySelector("#farenheit-link");
 farenheitLink.addEventListener("click", convertToFarenheit);
 
-// Weather Api
 
 
 // Change of background
