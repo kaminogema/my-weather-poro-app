@@ -1,0 +1,149 @@
+body {
+    width: 100%;
+    height: auto;
+    font-family: 'Nerko One', cursive;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.main-content {
+    max-width: 500px;
+    display: block;
+    margin: 5px auto;
+    border: solid 3px black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    background-image: url(/img/day.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -8rem;
+    font-family: 'Nerko One', cursive;
+    box-shadow: 5px 5px 130px #2E3F58;
+}
+.form {
+ display: block;
+ text-align: center;
+ padding: 20px;
+}
+input {
+    background-color: #E9A2B2;
+    border: solid 3px #2E3F58;
+    border-radius: 15px;
+    text-align: center;
+    padding: 5px;
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+}
+input:hover {
+    background-color: #DBEBCE;
+    transform: scale(1.02);
+    transition: all 300ms;
+}
+::placeholder {
+    color: #2E3F58;
+    opacity: 0.6;
+}
+button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 5px;
+    
+}
+.temp-link {
+    text-decoration: none;
+    color: #2E3F58;
+}
+.fa-magnifying-glass {
+   font-size: 18px;
+   font-weight: 700;
+}
+.fa-magnifying-glass:hover, .fa-location-dot:hover {
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+.fa-location-dot {
+  font-size: 18px;
+  font-weight: 700;  
+}
+.search-text-input {
+    color: #2E3F58;
+}
+.current-weather {
+    display: block;
+    max-width: 380px;
+    margin: 0 auto;
+    text-align: left;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.description {
+    text-transform: capitalize;
+}
+.place-time {
+    border: 4px solid #2E3F58;
+    border-radius: 20px;
+    background-color: #E9A2B2;
+    padding: 10px;
+}
+.current-weather-icon {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+}
+.weather-description {
+    text-align: center;
+    border: 4px solid #2E3F58;
+    border-radius: 20px;
+    background-color: #E9A2B2;
+}
+.last-update {
+    margin-bottom: 0;
+}
+.future-forecast {
+    display: block;
+    margin: 0 auto;
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    padding-right: 28px;
+    padding-left: 28px;
+}
+.future-forecast h5 {
+    text-align: center;
+}
+.col {
+    display: block;
+    text-align: center;
+    border: solid 4px #2E3F58;
+    margin: 2px;
+    border-radius: 30px;
+    background-color: #E9A2B2;
+    width: 100%;
+    height: auto;
+}
+.col:hover {
+    background-color: #DBEBCE;
+    transform: scale(1.02);
+    transition: all 300ms;
+}
+.col.h5:hover, .col.p:hover {
+    color: black;
+}
+.author {
+    text-align: center;
+    font-family: 'Nerko One', cursive;
+}
+h3, h5, p {
+    color: black;
+}
+.name-author {
+    color: #2E3F58;
+    text-decoration: none;
+}
