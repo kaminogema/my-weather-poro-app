@@ -71,14 +71,16 @@ function displayWeatherCondition(response) {
     let temperatureElement = document.querySelector("#temp-display");
     temperatureElement.innerHTML = temperature;
     let descriptionElement = document.querySelector("#description");
-    descriptionElement.innerHTML = response.data.weather[0].main;
+    descriptionElement.innerHTML = response.data.weather[0].description;
     let humidityElement = document.querySelector("#humidity");
     humidityElement.innerHTML = response.data.main.humidity;
     let windElement = document.querySelector("#wind-speed");
     let wind = Math.round(response.data.wind.speed);
     windElement.innerHTML = wind;
+    let iconElement = document.querySelector("#current-icon");
+    iconElement.setAttribute("src", `img/${response.data.weather[0].icon}.png`);
+    iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-
 function searchLocation(position) {
     let apiKey = "c2fbbf737eacdc69f24df5cfe324721b";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
