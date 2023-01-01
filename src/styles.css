@@ -136,6 +136,9 @@ button {
 .col.h5:hover, .col.p:hover {
     color: black;
 }
+.weather-forecast-min {
+    opacity: 0.6;
+}
 .author {
     text-align: center;
     font-family: 'Nerko One', cursive;
