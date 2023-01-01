@@ -95,3 +95,33 @@ function getCurrentLocation(event) {
 
 let currentLocationButton = document.querySelector("#geolocation");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+//Future forecast
+
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+
+    let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    
+    let forecastHTML = `<div class="row">`;
+    
+    days.forEach(function (day) {
+        forecastHTML = forecastHTML + `
+    <div class="col">
+<h5 class="weather-forecast-date">
+    ${day}
+</h5>
+<img src="img/04d.png" width="70px" alt="clearnight">
+<br>
+<p>
+    <span class="weather-forecast-max">6°C</span>/
+    <span class="weather-forecast-min">4°C</span>
+</p>
+    </div>
+    `;
+    });
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+}
+displayForecast()
+
