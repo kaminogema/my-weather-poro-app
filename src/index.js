@@ -36,26 +36,6 @@ let form = document.querySelector("#search-form");
 
 form.addEventListener("submit", search);
 
-// Temperature
-function convertToCelsius(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temp-display");
-    temperatureElement.innerHTML = 14;
-}
-
-function convertToFarenheit(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temp-display");
-    temperatureElement.innerHTML = Math.round((14 * 9/5) + 32);
-}
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
-
-let farenheitLink = document.querySelector("#farenheit-link");
-farenheitLink.addEventListener("click", convertToFarenheit);
-
-
 
 // Change of background
 let backgroundChange = document.querySelector("#main-content");
