@@ -142,5 +142,4 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#geolocation");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-
-
+searchCity("Odesa");
