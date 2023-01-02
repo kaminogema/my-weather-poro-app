@@ -63,7 +63,14 @@ let backgroundChange = document.querySelector("#main-content");
      backgroundChange.style.backgroundImage = "url('img/night.gif')";
 }
     
-// Geolocation
+// Future forecast
+function formatDay(timestamp) {
+    let date = new Date(timestamp * 1000);
+    let day = date.getDay();
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return days[day];
+}
+
 function getForecast(coordinates) {
     let apiKey = "3dce9b1c66837262a25b3f448d354a76";
     let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
@@ -71,31 +78,35 @@ function getForecast(coordinates) {
 }
 
 function displayForecast(response) {
-    console.log(displayForecast);
+    let forecast = response.data.daily;
     let forecastElement = document.querySelector("#forecast");
 
     let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
     let forecastHTML = `<div class="row">`;
     
-    days.forEach(function (day) {
-        forecastHTML = forecastHTML + `
+    forecast.forEach(function (forecastDay, index) {
+        if (index < 6) {
+            forecastHTML = forecastHTML + `
     <div class="col">
 <h5 class="weather-forecast-date">
-    ${day}
+    ${formatDay(forecastDay.dt)}
 </h5>
-<img src="img/04d.png" width="70px" alt="clearnight">
+<img src="img/${forecastDay.weather[0].icon}.png" width="70px" alt="clearnight">
 <br>
 <p>
-    <span class="weather-forecast-max">6°C</span>/
-    <span class="weather-forecast-min">4°C</span>
+    <span class="weather-forecast-max">${Math.round(forecastDay.temp.max)}°C</span>/
+    <span class="weather-forecast-min">${Math.round(forecastDay.temp.min)}°C</span>
 </p>
     </div>
     `;
+        }
     });
     forecastHTML = forecastHTML + `</div>`;
     forecastElement.innerHTML = forecastHTML;
 }
+
+//Geolocation
 
 function displayWeatherCondition(response) {
     let city = document.querySelector("#city");
@@ -130,9 +141,6 @@ function getCurrentLocation(event) {
 
 let currentLocationButton = document.querySelector("#geolocation");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
-//Future forecast
-
 
 
 
