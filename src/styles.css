@@ -19,8 +19,7 @@ body {
     background-size: cover;
     background-position-x: -8rem;
     font-family: 'Nerko One', cursive;
-    box-shadow: 5px 5px 130px #2E3F58;
-    text-shadow: 0 0 3px #DBEBCE, 0 0 5px #DBEBCE;
+    text-shadow: 0 0 1px #DBEBCE, 0 0 3px #DBEBCE;
 }
 .form {
  display: block;
@@ -108,7 +107,7 @@ button {
     background-color: #E9A2B2;
 }
 .last-update {
-    margin-bottom: 0;
+    margin-bottom: 2px;
 }
 .future-forecast {
     display: block;
